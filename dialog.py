@@ -75,7 +75,7 @@ class Dialog(QtGui.QWidget):
             elif e.text() == "\x1b":
                 keys.append("Esc")
             else:
-                keys.append(e.text())
+                keys.append(e.text().lower())
 
         modifier = QtGui.QApplication.instance().keyboardModifiers()
         if modifier & QtCore.Qt.ShiftModifier:
@@ -93,6 +93,8 @@ class Dialog(QtGui.QWidget):
         if modifier & QtCore.Qt.NoModifier:
             return
 
+        print keys
+        keys = list(set(keys))
         print keys
         if len(keys) > 1:
             for mod_name in self.KEY_MODIFIERS:

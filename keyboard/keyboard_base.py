@@ -1,5 +1,5 @@
 import weakref
-from keys import UniqueKey, BaseKey, DisabledKey
+from ShortcutEditorNuke.keys import UniqueKey, BaseKey, DisabledKey
 from PySide import QtGui
 
 
