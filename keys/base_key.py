@@ -9,7 +9,8 @@ class BaseKey(QtGui.QPushButton):
     def __init__(self, *args, **kwargs):
         super(BaseKey, self).__init__(*args, **kwargs)
         self.type = self.KEY_TYPE
-        self.setMinimumWidth(35)
+        self.setMinimumWidth(32)
+        self.setMinimumHeight(32)
         self.setCheckable(True)
         self.clicked.connect(self.emit_clicked)
 
