@@ -2,6 +2,7 @@
 Nuke shortcut editor keyboard
 
 Current status
+
 ![alt text](reference/colors.gif "Current Keyboard status")
 
 Current Goal
