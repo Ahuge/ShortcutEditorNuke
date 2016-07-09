@@ -12,8 +12,6 @@ class Dialog(QtGui.QWidget):
         super(Dialog, self).__init__()
         self.current_seq = KeySequenceObject()
         self.seqs = []
-        self._recseq = QtGui.QKeySequence()
-        self._modifiers = None
         box = QtGui.QVBoxLayout()
         box.setSpacing(0)
         box.setContentsMargins(0, 0, 0, 0)
