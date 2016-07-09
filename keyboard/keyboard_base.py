@@ -1,5 +1,5 @@
 import weakref
-from ShortcutEditorNuke.keys import UniqueKey, BaseKey, DisabledKey
+from keys import UniqueKey, BaseKey, DisabledKey
 from PySide import QtGui
 
 
@@ -20,7 +20,7 @@ class Keyboard(QtGui.QWidget):
          ('i', 2, UniqueKey), ('o', 2, UniqueKey), ('p', 2, UniqueKey), ('[', 2, UniqueKey),
          (']', 2, UniqueKey), ('\\', 3.5, UniqueKey)],
 
-        [('Caps Lock', 3.5, UniqueKey), ('', 0.5, UniqueKey), ('a', 2, UniqueKey), ('s', 2, UniqueKey),
+        [('CapsLock', 3.5, UniqueKey), ('', 0.5, UniqueKey), ('a', 2, UniqueKey), ('s', 2, UniqueKey),
          ('d', 2, UniqueKey), ('f', 2, UniqueKey), ('g', 2, UniqueKey), ('h', 2, UniqueKey),
          ('j', 2, UniqueKey), ('k', 2, UniqueKey), ('l', 2, UniqueKey), (';', 2, UniqueKey),
          ('\'', 2, UniqueKey), ('Return', 4, UniqueKey)],
@@ -76,8 +76,6 @@ class Keyboard(QtGui.QWidget):
     def add_key_toggle(self, key):
         key_set = set(self.active_keys[key.type])
         if key.type == UniqueKey.KEY_TYPE:
-            for active_key in key_set:
-                active_key.setChecked(False)
             key_set.clear()
         key_set.add(key)
         self.active_keys[key.type] = list(key_set)

@@ -1,0 +1,6 @@
+from key_sequence import KeySequenceObject
+
+HEX_COLOUR_NONE = 0x000000
+HEX_COLOUR_RED = 0x660000
+HEX_COLOUR_GREEN = 0x006600
+HEX_COLOUR_BLUE = 0x000066
